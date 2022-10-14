@@ -1,0 +1,230 @@
+:root {
+    /* FONTS */
+    --ff-heading-300: 2rem;    /*  32  px*/
+    --ff-heading-400: 2.5rem; /*  40  px*/
+    --ff-heading-500: 3rem;   /*  56  px*/
+    --ff-heading-700: 4.5rem; /*  72  px*/
+    --ff-body-400: 0.9375rem; /*  15  px*/
+    --ff-body-500: 1.5rem;    /*  24  px*/
+    /*  COLORS */
+    --white: hsl(0,0%, 100%);
+    --black: hsl(0,0%, 0%);
+    --dark-gray: hsl(0,0%, 55%);
+    --very-dark-gray: hsl(0,0%, 41%);
+
+
+
+    /* FONTS ADDJUSTMENTS */
+    --primary-heading: var(--ff-heading-400);
+    --secondary-heading: var(--ff-heading-300);
+    --primary-body: var(--ff-body-400);
+    --secondary-body: var(--ff-body-500);
+}
+
+@media screen and (min-width: 50em) {
+:root {
+    --primary-heading: var(--ff-heading-700);
+    --secondary-heading: var(--ff-heading-500);
+}
+}
+
+.primary-heading {
+    font-size: var(--primary-heading);
+}
+.secondary-heading {
+    font-size: var(--secondary-heading);
+}
+.primary-body {
+    font-size: var(--ff-body-400);
+}
+.secondary-body {
+    font-size: var(--ff-body-500);
+}
+.primary-font-family {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.secondary-font-family {
+    font-family: 'Alata', sans-serif;
+}
+
+/* STYLINGS */
+
+/*
+    HERO
+*/
+.hero {
+    background-image: url('./images/mobile/image-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40.625rem; /* 650px */
+    width: 100%;
+    position: relative;
+    color: var(--white);
+    position: relative;
+}
+.hero__primary-nav {
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero__text-content {
+    margin-top: 10rem;
+    padding: 2rem;
+    margin-left: 1.5rem;
+    border: 1px solid var(--white);
+    width: 20.4375rem; 
+}
+
+/*
+    MOBILE/DESKTOP AND MEDIA FOR THESE SECTIONS
+*/
+.mobile-nav-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 3rem;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: var(--black);
+}
+
+.mobile-nav__list-item {
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+.desktop-nav-list {
+    display: none;
+}
+
+
+@media (min-width: 50em) {
+    .hero {
+        background-image: url('./images/desktop/image-hero.jpg');
+    }
+    .hero__text-content {
+        width: 40.625rem; /* 650px */
+    }
+    .primary-nav__burger-icon {
+        display: none;
+    }
+    .mobile-nav-list {
+        display: none;
+    }
+    .desktop-nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 32rem;
+    }
+}
+
+/* UTILITY */
+.black-background {
+    background-color: var(--black);
+}
+
+.disabled  {
+    display: none;
+}
+
+/* SECTION FOUNDED */
+.section-founded {
+    margin-top: 4rem;
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-founded div:nth-child(2) {
+   padding: 2rem 4rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.section-founded div:nth-child(2) h1,
+.section-founded div:nth-child(2) p {
+    text-align: center; 
+    margin: .5rem 0;
+}
+
+@media  screen and (min-width: 75em) {
+    .section-founded .column {
+        width: 50%;
+    }
+    .section-founded div:nth-child(1) {
+        margin-left: -20rem;
+    }
+    .section-founded div:nth-child(2) {
+        margin-right: -20rem;
+        margin-top: -10rem;
+        background-color: var(--white);
+    }
+    
+}
+
+/* SECTION CREATIONS */
+.section-creations {
+    padding: 2rem 1rem;
+}
+
+
+.btn {
+    width: 9.8125rem; /* 157 */
+    height: 2.5rem; /* 40 */
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: .8;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.image-container__article {
+    position: relative;
+    width: 100%;
+}
+
+.image-container__article p {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    font-weight: 400;
+}
+
+@media  screen and (min-width: 55em) {
+    .image-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .image-container__article {
+        width: 25%;
+    }
+    
+}
