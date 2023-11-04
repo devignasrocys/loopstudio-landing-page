@@ -1,15 +1,12 @@
-const PRIMARY_NAV = document.getElementById('primary-nav');
-const BURGER_ICON = document.getElementById('burger-icon');
-const CLOSE_ICON = document.getElementById('close-icon');
-const MOBILE_NAV = document.getElementById('mobile-nav');
-
-const toggleMobileMenu = () => {
-    PRIMARY_NAV.classList.toggle('black-background');
-    MOBILE_NAV.classList.toggle('disabled');
-    CLOSE_ICON.classList.toggle('disabled');
-    BURGER_ICON.classList.toggle('disabled');
+const DOM_STRINGS = {
+    btn_hamburger: document.getElementById('hamburger-btn'),
+    btn_hamburger_icon: document.getElementById('hamburger-icon'),
+    btn_close_icon: document.getElementById('close-icon'),
+    menu: document.getElementById('menu')
 }
 
-BURGER_ICON.addEventListener('click', toggleMobileMenu)
-
-CLOSE_ICON.addEventListener('click', toggleMobileMenu)
+DOM_STRINGS.btn_hamburger.addEventListener('click', () =>{
+    DOM_STRINGS.menu.classList.toggle('nav-mobile')
+    DOM_STRINGS.btn_hamburger_icon.classList.toggle('display-hide')
+    DOM_STRINGS.btn_close_icon.classList.toggle('display-hide')
+})
