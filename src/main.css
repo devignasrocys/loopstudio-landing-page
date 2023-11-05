@@ -122,8 +122,93 @@ body {
     font-weight: 400;
 }
 
+.creations-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 96px;
+}
 
-@media screen and (min-width: 1025px) {
+.creations-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.creations-section h1 {
+    font-size: 32px;
+    margin-bottom: 48px;
+}
+
+.creations-section .article {
+    width: 327px;
+    margin: 12px 0;
+    position: relative;
+}
+
+.creations-section .article p {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    font-size: 24px;
+    color: var(--white);
+    font-weight: 200;
+}
+
+.creations-section .btn-all-mobile {
+    width: 157px;
+    height: 40px;
+    border: 1px solid var(--very-dark-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 34px;
+}
+
+.footer {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 96px;
+}
+
+.footer img {
+    margin-top: 56px;
+}
+
+.footer ul:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.footer ul:nth-child(2) li a {
+    display: block;
+    font-size: 15px;
+    margin-top: 16px;
+    color: var(--white);
+}
+
+.footer ul:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.footer p {
+    color: var(--white);
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+
+@media screen and (min-width: 1125px) {
     .header {
         background-image: url('./images/desktop/image-hero.jpg');
         padding: 64px 165px;
@@ -176,5 +261,37 @@ body {
         width: 541px;
         height: 317px;
     }
+    .creations-section .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 1125px;
+    }
+    .creations-section .article {
+        width: 256px;
+        margin: 12px;
+        position: relative;
+    }
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 165px;
+    }
+    .footer .container ul,
+    .footer .container img {
+        margin-top: 0;
+    }
+    .footer ul:nth-child(2) {
+        flex-direction: row;
+    }
+    .footer ul:nth-child(2) li {
+        margin-right: 18px;
+    }
+    .footer ul:nth-child(1) {
+        margin-top: 16px;
+    }
+
 
 }
